@@ -626,6 +626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 7199082236408155936, guid: 5c23d44cd2c5944c9bf2b7d5a1f93110, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7953818313066454949, guid: 5c23d44cd2c5944c9bf2b7d5a1f93110, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2

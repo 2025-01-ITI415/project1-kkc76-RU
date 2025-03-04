@@ -10,8 +10,7 @@ public class Goal : MonoBehaviour{
 	void OnTriggerEnter(Collider other) {
         // when the trigger is hit by something
         // check to see if it's a Projectile 
-        PlayerController player = other.GetComponent<PlayerController>();
-		if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
 		{
 			SceneManager.LoadScene("_Scene_0");
 

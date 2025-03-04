@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public Text countText;
 	public Text winText;
 
+
+
 	// Create private references to the rigidbody component on the player, and the count of pick up objects picked up so far
 	private Rigidbody rb;
 	private int count;
@@ -45,11 +47,22 @@ public class PlayerController : MonoBehaviour {
 		// Add a physical force to our Player rigidbody using our 'movement' Vector3 above, 
 		// multiplying it by 'speed' - our public player speed that appears in the inspector
 		rb.AddForce (movement * speed);
+
+	}
+    private void Update()
+    {
+		if (Input.GetKeyDown("space") && GetComponent<Rigidbody>().transform.position.y <= 0.6250001f)
+		{
+			Vector3 jump = new Vector3(0.0f, 200.0f, 0.0f);
+
+			GetComponent<Rigidbody>().AddForce(jump);
+		}
+
 	}
 
-	// When this game object intersects a collider with 'is trigger' checked, 
-	// store a reference to that collider in a variable named 'other'..
-	void OnTriggerEnter(Collider other) 
+    // When this game object intersects a collider with 'is trigger' checked, 
+    // store a reference to that collider in a variable named 'other'..
+    void OnTriggerEnter(Collider other) 
 	{
 		// ..and if the game object we intersect has the tag 'Pick Up' assigned to it..
 		if (other.gameObject.CompareTag ("Pick Up"))

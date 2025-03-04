@@ -2,21 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Start_Game : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartButton()
     {
-        
+
+        SceneManager.LoadScene("_Scene_0");
+
     }
-
-    // Update is called once per frame
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("space")
-        {
-            SceneManager.LoadScene("_Start");
-
-        }
 }

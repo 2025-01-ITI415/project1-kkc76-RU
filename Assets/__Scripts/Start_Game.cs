@@ -11,4 +11,10 @@ public class Start_Game : MonoBehaviour
         SceneManager.LoadScene("_Scene_0");
 
     }
+    public void ResetButton()
+    {
+
+        SceneManager.LoadScene("_Start");
+
+    }
 }

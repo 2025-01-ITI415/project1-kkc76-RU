@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
 	// Create private references to the rigidbody component on the player, and the count of pick up objects picked up so far
 	private Rigidbody rb;
-	private int count;
+	public int count;
 
 	// At the start of the game..
 	void Start()
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
 			// Add one to the score variable 'count'
 			count = count + 1;
-
+	
 			// Run the 'SetCountText()' function (see below)
 			SetCountText();
 		}
@@ -86,7 +86,8 @@ public class PlayerController : MonoBehaviour
 		if (count >= 12)
 		{
 			// Set the text value of our 'winText'
-			winText.text = "You Win!";
+			winText.text = "You Got them all";
 		}
 	}
+
 }

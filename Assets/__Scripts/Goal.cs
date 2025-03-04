@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent (typeof(Renderer))]
 public class Goal : MonoBehaviour{
-	static public bool 	goalMet = false;
+
 
 	void OnTriggerEnter(Collider other) {
         // when the trigger is hit by something
-        // check to see if it's a Projectile 
+
         if (other.gameObject.CompareTag("Player"))
 		{
-			SceneManager.LoadScene("_Scene_0");
+			SceneManager.LoadScene("_Finish");
 
 
 		}

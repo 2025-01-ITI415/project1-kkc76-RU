@@ -6,7 +6,7 @@ using UnityEngine;
 public class RigidbodySleep : MonoBehaviour{
    private int sleepCountdown = 4;
    private Rigidbody rigid;
-
+     
    void Awake(){
     rigid = GetComponent<Rigidbody>();
    }

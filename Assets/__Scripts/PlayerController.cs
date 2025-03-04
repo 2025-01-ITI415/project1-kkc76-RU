@@ -3,7 +3,7 @@ using UnityEngine;
 
 // Include the namespace required to use Unity UI
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 using System.Collections;
 
 public class PlayerController : MonoBehaviour
